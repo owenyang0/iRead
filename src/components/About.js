@@ -1,20 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import {
   StyleSheet,
   View,
-  Text
+  Text,
 } from 'react-native'
 
-export default class About extends Component {
-  render () {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Test About Rfoaaaute</Text>
-      </View>
-    )
-  }
-}
+const About = () => (
+  <View style={styles.container}>
+    <Text style={styles.welcome}>Test About Rfoaaaute</Text>
+  </View>
+)
+
+export default About
 
 const styles = StyleSheet.create({
   container: {
@@ -33,4 +31,4 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-});
+})

@@ -1,8 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'
 
 import {
-  StyleSheet,
-  NavigatorIOS
+  NavigatorIOS,
 } from 'react-native'
 
 import About from './components/About'
@@ -11,7 +10,7 @@ export default class App extends Component {
   render() {
     return (
       <NavigatorIOS
-        ref='nav'
+        ref={nav => { this.nav = nav }}
         initialRoute={{
           component: About,
           title: 'Me',
