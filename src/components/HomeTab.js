@@ -6,6 +6,7 @@ import {
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
+import Activity from '../containers/Activity'
 import Me from './Me'
 
 class HomeTabBar extends React.Component {
@@ -26,13 +27,13 @@ class HomeTabBar extends React.Component {
         tintColor="#1B95E0"
       >
         <Icon.TabBarItem
-          title="主页"
+          title="动态"
           iconName="ios-home-outline"
           selectedIconName="ios-home"
           onPress={() => this.handleTabPress('home')}
           selected={this.state.selectedTab === 'home'}
         >
-          <Me />
+          <Activity />
         </Icon.TabBarItem>
         <Icon.TabBarItem
           title="我"
