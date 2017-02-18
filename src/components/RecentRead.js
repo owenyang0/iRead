@@ -4,6 +4,7 @@ import {
   Text,
   Image,
   ListView,
+  SegmentedControlIOS,
   StyleSheet,
 } from 'react-native'
 
@@ -11,6 +12,16 @@ import {
 import collections from '../data/collections'
 
 const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    marginTop: 64,
+  },
+  segment: {
+    marginVertical: 10,
+    paddingHorizontal: 10,
+  },
+  bookList: {
+  },
   bookImage: {
     marginRight: 15,
   },
@@ -54,6 +65,7 @@ class RecentRead extends Component {
 
   renderRow = (row) => {
     const { book } = row
+
     return (
       <View style={styles.row}>
         <Image
@@ -73,11 +85,15 @@ class RecentRead extends Component {
 
   render() {
     return (
-      <View>
-        <Text>Recent Read</Text>
+      <View style={styles.wrapper}>
+        <View style={styles.segment}>
+          <SegmentedControlIOS values={['已读', '在读', '想读']} selectedIndex={0} tintColor="#2aa2ef" />
+        </View>
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}
+          automaticallyAdjustContentInsets={false}
+          style={styles.bookList}
         />
       </View>
     )
