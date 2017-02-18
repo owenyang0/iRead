@@ -4,19 +4,12 @@ import {
   NavigatorIOS,
 } from 'react-native'
 
-import About from './components/About'
+import HomeTab from './components/HomeTab'
 
 export default class App extends Component {
   render() {
     return (
-      <NavigatorIOS
-        ref={nav => { this.nav = nav }}
-        initialRoute={{
-          component: About,
-          title: 'Me',
-        }}
-        style={{ flex: 1 }}
-      />
+      <HomeTab />
     )
   }
 }
