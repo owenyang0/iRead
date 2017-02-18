@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   bookList: {
+    marginBottom: 48,
   },
   bookImage: {
     marginRight: 15,
