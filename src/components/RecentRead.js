@@ -12,7 +12,7 @@ import collections from '../data/collections'
 
 const styles = StyleSheet.create({
   bookImage: {
-    marginRight: 20,
+    marginRight: 15,
   },
   row: {
     paddingVertical: 15,
@@ -24,6 +24,22 @@ const styles = StyleSheet.create({
   },
   rowText: {
     flex: 1,
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 15,
+  },
+  author: {
+    color: '#908F8F',
+    marginVertical: 5,
+  },
+  comment: {
+    marginTop: 10,
+    color: '#585757',
+  },
+  pages: {
+    marginTop: 10,
+    color: '#908F8F',
   },
 })
 
@@ -41,15 +57,15 @@ class RecentRead extends Component {
     return (
       <View style={styles.row}>
         <Image
-          source={{ uri: book.images.large, height: 130, width: 95 }}
+          source={{ uri: book.images.large, width: 95 }}
           style={styles.bookImage}
           resizeMode="contain"
         />
         <View style={styles.rowText}>
-          <Text>{book.title}</Text>
-          <Text>{row.comment}</Text>
-          <Text>{book.pages}</Text>
-          <Text>{book.author.join(' ')}</Text>
+          <Text style={styles.title}>{book.title}</Text>
+          <Text style={styles.author}>{book.author.join(' ')}</Text>
+          <Text style={styles.comment}>{row.comment}</Text>
+          <Text style={styles.pages}>{book.pages} 页</Text>
         </View>
       </View>
     )
