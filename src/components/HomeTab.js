@@ -11,7 +11,7 @@ import Me from './Me'
 
 class HomeTabBar extends React.Component {
   state = {
-    selectedTab: 'me',
+    selectedTab: 'home',
   };
 
   handleTabPress(tabName) {
